@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Learn Japanese</title>
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" type="text/css" href="jpstyle.css">
+<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+<meta charset='utf-8'>
+</head>
+<body style="width:100%; margin:0 auto; color:white; background-color: #A6BAC7;font-family: 'Cabin', sans-serif;overflow:hidden">
+<div id='load' style="display:block; width:260px; margin:0 auto; margin-top:100px; text-align:center;opacity: 0;transition: opacity 1.5s;overflow:auto;">
+	<div id='loader'></div><div id='loader2'></div>
+</div>
+<div id='main' style="display:none;width:96%; height:auto; margin-left:2%;margin-top:5vh;overflow:hidden;position:absolute;">
+	<div id='left' style='width:20%; height:90vh; position: relative; float:left; text-decoration: none;cursor:default; user-select: none; transition:opacity 2s; overflow-x:hidden; transition:opacity 2s, margin 2s; margin-top:20px; opacity:0;'>
+		<input id='bTest' type='submit' onclick='takeTest()' value='take a test' style='width:100%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#CD9797; border-radius:5px;position:relative;float:left;margin-bottom:2px;opacity:0.7; transition:background-color 2s;'>
+		<input id='learnWord' type='submit' value='learned!' onclick="learnWord()" style='width:55%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#BFBFBF; border-radius:5px;position:relative;float:left;margin-bottom:2px;opacity:0.7; transition:background-color 2s;'>
+		<input id='deleteWord' type='submit' value='delete' onclick="deleteWordClick()" style='width:45%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#BFBFBF; border-radius:5px;position:relative;float:left;margin-bottom:2px;opacity:0.7; transition:background-color 2s;'>
+		<input id='randomWord' type='submit' value='random word' onclick="newWord()" style='width:45%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#8FA2AE; border-radius:5px;position:relative;float:left;margin-bottom:2px;opacity:0.7'>
+		<input id='newSentence' type='submit' value='random sentence' onclick="newSentence()" style='width:55%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#8FA2AE; border-radius:5px;position:relative;float:left;margin-bottom:2px;opacity:0.7'>
+		<input id='learnedList' type='submit' onclick='learnedList()' value='learned list' style='width:100%;outline:none; color:white; text-align:center; font-size: 14px; background-color:#8FA2AE; border-radius:5px;position:relative;float:left;margin-bottom:5px;opacity:0.7; transition:background-color 2s;'>
+	</div>
+	<div id='right' style='width:80%; height:90vh; position: relative; float:left; text-align:center; cursor:default; overflow-y:auto;'></div>
+</div>
+<div onclick='nextDialogue()' id='blackBack' style='display:none;width:100%;height:100vh;background-color:rgba(0,0,0,0.75);opacity:0;position:absolute;transition:opacity 1s;'></div>
+<div id='optionsDialogue' style='display:none;width:30%;margin-left:5%;height:10vh;margin-top:76vh;opacity:0;position:absolute;transition:opacity 1.5s, margin 1.5s;'>
+	<input id='yesOption' onclick="nextDialogue('yes')" type='submit' style='width:50%;height:100%;font-size:20px;outline:none;color:white;text-align:center;background-color:#8FA2AE;border-radius:17px 0px 0px 17px;position:relative;float:left;opacity:0.9;'>
+	<input id='noOption' onclick="nextDialogue('no')" type='submit' style='width:50%;height:100%;font-size:20px;outline:none;color:white;text-align:center;background-color:#8FA2AE;border-radius:0px 17px 17px 0px;position:relative;float:left;opacity:0.9;'>
+</div>
+<div id='poseBox' style="pointer-events:none;display:none;width:90%;opacity:0;margin-left:5%;text-align:center;height:70vh;margin-top:5vh;position:absolute;cursor:default;transition: opacity 1s, margin 1s;"><img id='pose' style='user-select:none;max-width:100%;max-height:100%;object-fit:contain; transition:opacity 1s, margin 1s;'></div>
+<div onclick='nextDialogue()' id='dialogueBox' style="display:none;width:90%;margin-left:5%;height:20vh;margin-top:100vh;background-color:#7A909F;opacity:0;position:absolute;user-select: none;cursor:default;border:6px solid #94A9B7;border-radius:15px;transition:opacity 1s, margin 1s;overflow-y:auto;"><span id='dialogueText' style='width:98%;margin-left:1%;position:relative;float:left;margin-top:10px;font-size:23px'></span></div>
+</body>
+<script>
+setTimeout(function(){
+	if(document.getElementById("load")) document.getElementById("load").style.opacity=0.8;
+},10);
+
+</script>
+<script src="dic.js"></script>
+<script src="dic1_5.js"></script>
+<script src="dic2.js"></script>
+<script src="jpscript.js"></script>
+</html>

@@ -21,3 +21,6 @@ Kanji Learn gamificate the process of learning so the user actually can see and 
 
 Having 100% of EXP points lets you mark a word as learned.  
 ![learned](https://github.com/gastronleroux/Kanji-learn/blob/master/appusage/4.gif)
+
+After adding 20 words to your learned list, the memory check button unlocks. It unfolds a kind of test which lets you review previously learned words in a pressure-free manner.  
+![learned](https://github.com/gastronleroux/Kanji-learn/blob/master/appusage/5.gif)
